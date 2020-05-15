@@ -70,3 +70,17 @@ This command trigger this commands:
 ## Server
 
 The server used in production, is a `http-server`
+
+## Deploy gh-pages
+
+For deploy the project, you need run this script:
+
+- for npm client
+    ```bash
+    $ npm run deploy
+    ```
+- for yarn client
+    ```bash
+    $ yarn deploy
+    ```
+

@@ -1,21 +1,39 @@
 {
   "name": "layout",
   "version": "0.1.0",
-  "description": "",
+  "private": true,
+  "description": "POC Flexbox GridCSS",
+  "keywords": [
+    "Flexbox",
+    "GridCSS"
+  ],
+  "homepage": "https://github.com/krbaio3/lemoncode",
+  "bugs": {
+    "url": "https://github.com/krbaio3/lemoncode/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/krbaio3/lemoncode.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "J. KrBaIO3",
+    "email": "krbaio3@gmail.com"
+  },
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "parcel index.html",
     "prebuild": "rimraf dist",
     "build": "parcel build index.html",
-    "serve": "http-server dist",
+    "dev": "parcel index.html",
     "preprod": "npm run build",
-    "prod": "npm run serve"
+    "prod": "npm run serve",
+    "serve": "http-server dist",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "npm run build -- --public-url /lemoncode/",
+    "deploy": "gh-pages -d dist"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
+    "gh-pages": "^2.2.0",
     "http-server": "0.12.3",
     "rimraf": "^3.0.2"
   },

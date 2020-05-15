@@ -1,0 +1,38 @@
+// light theme
+$color-primary: red !default;
+$color-important: maroon !default;
+$color-warning: pink !default;
+$color-default: $color-primary;
+
+$shadow: -20px 20px 10px 5px rgba($color: black, $alpha: 0.8);
+
+
+#light {
+    main {
+    font-family: $font-primary;
+    font-weight: $font-weight-normal;
+}
+
+.secondary-font{
+    font-family: $font-second;
+    font-weight: $font-weight-fine;
+}
+
+.box {
+    &-shadow{
+        @extend .box;
+        box-shadow: $shadow
+    }
+    &.base {
+        background-color: $color-primary;
+    }
+    &.important {
+        background-color: $color-important;
+    }
+    &.warning {
+        background-color: $color-warning;
+    }
+}
+}
+
+

@@ -1,0 +1,83 @@
+@import "../styles/index.scss";
+
+$button-color: rgb(85, 161, 70);
+
+$shadow: rgb(238, 238, 238);
+
+$border-options: 1px solid black;
+
+// Se modifica la etiqueta main para que no quede tan pegado a la izquierda
+main {
+    margin: 50px;
+}
+
+// Mixins
+
+@mixin padding {
+    padding: {
+        left: $spacing-1;
+        right: $spacing-1;
+    }
+}
+
+// Clase container
+.container {
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: $spacing-15;
+    background-color: $white;
+}
+
+.shadow {
+    background-color: rgb(238, 238, 238);
+    padding: {
+        top: $spacing-05;
+        right: $spacing-1;
+        bottom: $spacing-05;
+        left: $spacing-15;
+    }
+}
+
+.card {
+    display: grid;
+    padding-bottom: $spacing-2;
+    background-color: $white;
+    border: {
+        right: $border-options;
+        bottom: $border-options;
+    }
+    .card-image {
+        width: 100%;
+    }
+}
+
+.btn {
+    padding: $spacing-05;
+    background-color: $button-color;
+    justify-self: center;
+    width: 95%;
+    color: white;
+    border: 0.1rem $button-color;
+
+    &:hover {
+        background-color: $background-nav-hover;
+    }
+
+    &:active {
+        background-color: $background-nav-activate;
+    }
+}
+
+.article {
+    @include padding;
+}
+
+.date {
+    color: $button-color;
+    padding-right: $spacing-1;
+}
+
+.publish-date {
+    justify-self: right;
+}

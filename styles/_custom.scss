@@ -1,0 +1,50 @@
+@import 'https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap';
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Indie+Flower&display=swap');
+
+
+// Font Variables
+$font-primary: 'Ubuntu', sans-serif;
+$font-second: "Comic Sans MS", cursive, sans-serif;
+$font-alternative-primary: 'Fredericka the Great', cursive;
+$font-alternative-second: 'Indie Flower', cursive;
+
+$font-weight-fine: 400;
+$font-weight-normal: 500;
+$font-weight-bold: 700;
+
+$background-nav-primary: darkcyan;
+$background-nav-activate: darkslategrey;
+$background-nav-hover: teal;
+
+$white: white;
+$black: black;
+
+$text-primary-color: $black;
+
+$spacing-05: 0.5rem;
+$spacing-1: 1rem;
+$spacing-15: 1.5rem;
+$spacing-2: 2rem;
+
+// Responsive
+$sm-width: 576px;
+$md-width: 768px;
+$lg-width: 992px;
+$xlg-width: 1200px;
+
+html {
+    
+    font-family: $font-second;
+    font-weight: $font-weight-fine;
+    color: $text-primary-color;
+
+    h1,h2,h3 {
+        font-family: $font-primary;
+        font-weight: $font-weight-bold;
+    }
+}
+
+@function generateColors ($color, $number, $tipo) {
+    @return if($tipo=='claro', lighten($color, $number), darken($color, $number));
+}
+

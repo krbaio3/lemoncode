@@ -1,0 +1,52 @@
+@import "../styles/index.scss";
+
+$background-nav-primary: darkcyan;
+$background-nav-activate: darkslategrey;
+$background-nav-hover: teal;
+
+
+
+// estilos genericos para etiquetas
+nav {
+    background-color: $background-nav-primary;
+    font: {
+        family: $font-alternative-second;
+        weight: $font-weight-bold;
+    }
+    a {
+        color: $white;
+        text-decoration: none;
+    }
+}
+
+// Se activa si se usa el js del fichero
+.active {
+    background-color: $background-nav-activate;
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: stretch;
+}
+
+.nav-item {
+    padding: $spacing-1;
+    text-align: center;
+
+    &:hover {
+        background-color: $background-nav-hover;
+    }
+
+    &:active {
+        background-color: $background-nav-activate;
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: $sm-width) {
+    .nav-container {
+        flex-direction: row;
+    }
+}

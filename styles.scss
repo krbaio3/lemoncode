@@ -1,0 +1,12 @@
+@import './styles/index.scss';
+
+nav {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.prueba {
+    background-image: url("./ejercicio4/dbs.jpg");
+    height: 300px;
+    width: 300px;
+}

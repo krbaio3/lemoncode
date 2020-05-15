@@ -3,4 +3,4 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{}],"Ligk":[function(require,module,exports) {
 "use strict";require("./ejercicio4.scss");
 },{"./ejercicio4.scss":"E3uo"}]},{},["Ligk"], null)
-//# sourceMappingURL=/ejercicio4.902258ca.js.map
+//# sourceMappingURL=/lemoncode/ejercicio4.902258ca.js.map

@@ -3,4 +3,4 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{}],"KxtA":[function(require,module,exports) {
 "use strict";require("./ejercicio3.scss");
 },{"./ejercicio3.scss":"cOhz"}]},{},["KxtA"], null)
-//# sourceMappingURL=/ejercicio3.fde2f2c6.js.map
+//# sourceMappingURL=/lemoncode/ejercicio3.fde2f2c6.js.map

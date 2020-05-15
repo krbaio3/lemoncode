@@ -1,0 +1,32 @@
+@import "../styles/index.scss";
+@import 'helpers';
+@import "./theme.light.scss";
+@import './theme.alternative.scss';
+
+.container {
+    @include basicFlexBox;
+}
+
+.box {
+    @include basicFlexBox;
+    @include normalizeBoxClass;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.btn {
+    margin: 30px;
+    border-radius: 200px 200px 200px 200px;
+    border: 1px solid goldenrod;
+    background-color: goldenrod;
+    &:hover{
+        background-color: yellow;
+        border: 1px solid yellow;
+    }
+     &:active {
+        background-color: gold;
+        border: 1px solid gold;
+    }
+}

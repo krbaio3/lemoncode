@@ -1,0 +1,21 @@
+@import './styles/index.scss';
+
+.main_index {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 5rem;
+
+    .main_index__anchor {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+
+        img {
+            margin: 0 auto;
+            height: 300px;
+        }
+
+    }
+}

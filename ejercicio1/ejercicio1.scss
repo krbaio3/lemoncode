@@ -1,0 +1,61 @@
+@import '../styles/index.scss';
+
+// Declaracion de variables
+$base-color: black;
+$base-color-1: blue;
+$base-color-2: red;
+$base-color-3: green;
+$types: 1,2,3,4;
+$lighten: 'lighten';
+$darken: 'darken';
+
+$listado: $base-color-1,
+$base-color-2,
+$base-color-3;
+
+// clases axiliares/privadas
+@mixin basic_flexBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+}
+
+$indice:1;
+@each $color in $listado {
+    .container-#{$indice} {
+        margin-top: 30px;
+        @include basic_flexBox;
+        @each $index in $types {
+            .#{$darken}-#{$index} {
+                background-color: darken($color, $index * 8);
+            }
+            .#{$lighten}-#{$index} {
+                background-color: lighten($color, $index * 8);
+            }
+        }
+        .base-color {
+            background-color: $color;
+            .color-box-text { 
+                color: white;
+            }
+        }
+    }
+    $indice: $indice + 1;
+}
+
+.box {
+    @include basic_flexBox;
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    align-items: center;
+
+    .color-box-text {
+        color: grey;
+    }
+}
+
+.header {
+    padding: 10px 5px 5px 20px;
+}

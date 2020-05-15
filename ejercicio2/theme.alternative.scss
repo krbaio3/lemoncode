@@ -1,0 +1,43 @@
+// alternative theme
+$color-default: blue;
+$color-primary: blue;
+$color-important: darkblue;
+$color-warning: aquamarine;
+
+$border-radius: 20px 20px 20px 20px;
+
+$shadow: 20px 20px 30px 5px
+    rgba(
+        $color: black,
+        $alpha: 0.8,
+    );
+
+#alternative {
+    main {
+        font-family: $font-alternative-primary;
+        font-weight: $font-weight-fine;
+    }
+
+    .secondary-font {
+        font-family: $font-alternative-second;
+        font-weight: $font-weight-fine;
+    }
+
+    .box {
+        &-shadow {
+            @extend .box;
+            box-shadow: $shadow;
+        }
+        &.base {
+            background-color: $color-primary;
+        }
+        &.important {
+            background-color: $color-important;
+        }
+        &.warning {
+            background-color: $color-warning;
+        }
+
+        border-radius: $border-radius;
+    }
+}

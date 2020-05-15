@@ -1,0 +1,14 @@
+@mixin basicFlexBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin normalizeBoxClass {
+    margin: 10px;
+    height: 150px;
+    width: 150px;
+    border: 1px solid;
+    align-items: center;
+}

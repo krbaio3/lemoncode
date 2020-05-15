@@ -83,4 +83,3 @@ For deploy the project, you need run this script:
     ```bash
     $ yarn deploy
     ```
-
